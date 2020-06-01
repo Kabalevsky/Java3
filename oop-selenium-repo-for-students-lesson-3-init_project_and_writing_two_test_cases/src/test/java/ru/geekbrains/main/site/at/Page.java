@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalToCompressingWhiteSpace;
 import static org.hamcrest.Matchers.equalToIgnoringWhiteSpace;
 
 public class Page {
@@ -35,7 +36,7 @@ public class Page {
 
     public Page checkNamePage(String exampleNamePage) {
         String headerPageText = headerPage.getText();
-        assertThat(headerPageText, equalToIgnoringWhiteSpace(exampleNamePage));
+        assertThat(headerPageText, equalToCompressingWhiteSpace(exampleNamePage));
         return this;
     }
 

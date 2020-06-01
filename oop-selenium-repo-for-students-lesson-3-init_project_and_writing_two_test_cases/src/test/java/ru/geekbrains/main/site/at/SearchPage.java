@@ -37,7 +37,6 @@ public class SearchPage {
     @FindBy(xpath = "/html/body/div[1]/div[7]/div/div[1]/div/ul/li[7]/a")
     public WebElement titleTests;
 
-    // У нас получается три блока: 1 блок с условием "более" - это профессии, курсы и блоги
     public SearchPage checkSection(String nameTitle) {
         switch (nameTitle) {
             case "Профессии": {
